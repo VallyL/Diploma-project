@@ -1,0 +1,81 @@
+@import "../../styles/main/functions";
+
+.joinMeetup,
+.mainText {
+  display: flex;
+}
+
+.mainText > h1,
+.mainText > p {
+  margin: 0;
+}
+
+.joinMeetup {
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1226px;
+  padding: 100px 15px;
+
+  @media screen and (max-width: 1000px) {
+    padding: 60px 15px;
+  }
+
+  @media screen and (max-width: 830px) {
+    padding: 40px 15px;
+  }
+
+  @media screen and (max-width: 700px) {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .mainText {
+    flex-direction: column;
+    gap: 20px;
+    h1 {
+      @include text-property(42px, 700, 52px);
+
+      @media screen and (max-width: 1000px) {
+        @include text-property(38px, 700, 35px);
+      }
+
+      @media screen and (max-width: 550px) {
+        @include text-property(25px, 700, 30px);
+      }
+    }
+
+    p {
+      @include text-property(16px, 400, 24px);
+
+      @media screen and (max-width: 550px) {
+        @include text-property(12px, 400, 24px);
+      }
+    }
+
+    button {
+      @include adaptive-width(125px);
+      height: 40px;
+      border-radius: 10px;
+      background-color: $primary-button-link-color;
+      border: none;
+      cursor: pointer;
+
+      a {
+        color: white;
+        font-size: 16px;
+        text-decoration: none;
+      }
+    }
+  }
+  .picture {
+    img {
+      @media screen and (max-width: 830px) {
+        @include adaptive-width(250px);
+      }
+
+      @media screen and (max-width: 550px) {
+        @include adaptive-width(215px);
+      }
+    }
+  }
+}

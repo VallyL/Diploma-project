@@ -1,0 +1,168 @@
+@import "../../styles/main/functions";
+
+.header,
+.firstChild,
+.serch,
+.serch > form,
+.english {
+  display: flex;
+  align-items: center;
+}
+
+.serch,
+.serch > form,
+.serch > form > input {
+  height: 42px;
+}
+
+.serch > form,
+.serch > form > input {
+  flex-grow: 1;
+}
+
+.serch > form > button,
+.english,
+.login,
+.signup {
+  border: none;
+}
+
+.serch > form > button,
+.english,
+.login {
+  background-color: transparent;
+}
+
+.serch > form > button,
+.english,
+.login,
+.signup {
+  cursor: pointer;
+}
+
+.header {
+  justify-content: space-between;
+  padding: 10px 23px;
+  @include adaptive-width(100%);
+}
+
+.firstChild {
+  img {
+    margin-right: 30px;
+  }
+
+  .serch {
+    border: 1px solid $primary-grey-color;
+    border-radius: 10px;
+    overflow: hidden;
+
+    form {
+      input {
+        padding-left: 10px;
+        outline: none;
+        font-size: 16px;
+        border: 1px solid $primary-grey-color;
+      }
+
+      button {
+        padding: 20px 10px;
+
+        span {
+          color: #707070;
+        }
+      }
+    }
+  }
+}
+
+.btnEnd {
+  display: flex;
+  gap: 15px;
+  font-size: 14px;
+
+  .english {
+    gap: 5px;
+  }
+  .login {
+    padding: 10px;
+  }
+  .signup {
+    padding: 10px 20px;
+    color: white;
+    background-color: $primary-button-link-color;
+    border-radius: 10px;
+  }
+}
+
+/*-------------------------------Media----------------------------------------*/
+
+@media (max-width: 890px) {
+  .header {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .header > div {
+    @include adaptive-width(100%);
+  }
+  .firstChild {
+    justify-content: space-between;
+  }
+  .btnEnd {
+    justify-content: end;
+  }
+  img {
+    @include adaptive-width(200px);
+  }
+}
+
+@media (max-width: 735px) {
+  img {
+    @include adaptive-width(150px);
+  }
+}
+
+@media (max-width: 670px) {
+  img {
+    @include adaptive-width(95px);
+  }
+}
+
+@media (max-width: 625px) {
+  .searchBtn,
+  .search-events-input {
+    display: none;
+  }
+  .serch {
+    @include adaptive-width(350px);
+  }
+  .search-city-input {
+    @include adaptive-width(295px);
+  }
+}
+
+@media (max-width: 525px) {
+  .serch {
+    @include adaptive-width(300px);
+  }
+  .search-city-input {
+    @include adaptive-width(245px);
+  }
+}
+
+@media (max-width: 476px) {
+  .serch {
+    @include adaptive-width(250px);
+  }
+  .search-city-input {
+    @include adaptive-width(195px);
+  }
+}
+
+@media (max-width: 426px) {
+  .serch {
+    @include adaptive-width(200px);
+  }
+  .search-city-input {
+    @include adaptive-width(145px);
+  }
+}

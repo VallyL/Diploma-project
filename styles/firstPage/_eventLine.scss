@@ -1,0 +1,57 @@
+@import "../../styles/main/functions";
+
+.eventLine > div > button > a,
+.eventLine > a {
+  text-decoration: none;
+}
+
+.eventLine {
+  @include flexing(flex, space-between, center);
+  @include adaptive-width(100%);
+  padding: 5px 15px;
+
+  div {
+    @include flexing(flex, start, center);
+    gap: 15px;
+
+    h1 {
+      @include text-property(28px, 600, 36px);
+
+      @media screen and (max-width: 550px) {
+        @include text-property(20px, 600, 25px);
+      }
+    }
+
+    button {
+      @include flexing(flex, space-around, center);
+      @include adaptive-width(239px);
+      background-color: $background-light-blue;
+      border: none;
+      border-radius: 10px;
+      height: 44px;
+
+      @media screen and (max-width: 550px) {
+        @include adaptive-width(164px);
+        height: 25px;
+      }
+
+      a {
+        color: $primary-button-link-color;
+        @include text-property(20px, 600, 24px);
+
+        @media screen and (max-width: 550px) {
+          @include text-property(13.7px, 600, 16.5px);
+        }
+      }
+    }
+  }
+
+  .hiddenLink {
+    color: $primary-button-link-color;
+    @include text-property(16px, 500, 24px);
+
+    @media screen and (max-width: 550px) {
+      display: none;
+    }
+  }
+}

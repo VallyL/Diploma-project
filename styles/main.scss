@@ -1,0 +1,38 @@
+@import "../styles/firstPage/header";
+@import "../styles/firstPage/joinMeetup";
+@import "../styles/firstPage/eventLine";
+@import "../styles/firstPage/eventsNear";
+@import "../styles/firstPage/upcoming";
+@import "../styles/firstPage/secondHeading";
+@import "../styles/firstPage/topCategories";
+@import "../styles/firstPage/citiesMeetup";
+@import "../styles/firstPage/discoverEvents";
+@import "../styles/firstPage/friendshipSection";
+@import "../styles/firstPage/createYourOwn";
+@import "../styles/firstPage/followUs";
+@import "../styles/firstPage/termsOfService";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.5s;
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  @include adaptive-width(100%);
+  justify-content: center;
+  @include flexing(flex, center, center);
+  flex-direction: column;
+}
+
+.smallerBody {
+  max-width: 1226px;
+}
+
+.lastPagePart {
+  width: 100%;
+  background-color: #212121;
+  padding: 0px 30px;
+}

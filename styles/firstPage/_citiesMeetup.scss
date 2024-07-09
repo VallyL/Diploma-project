@@ -1,0 +1,68 @@
+@import "../../styles/main/functions";
+
+.dissapearingDiv,
+.dissapearingDiv > img,
+.dissapearingDiv > h6 {
+  @media screen and (max-width: 797px) {
+    display: none;
+  }
+}
+
+.citiesMeetup {
+  @include adaptive-width(100%);
+  padding: 10px 15px;
+
+  h1 {
+    @include text-property(28px, 600, 36px);
+    margin-bottom: 15px;
+
+    @media screen and (max-width: 653px) {
+      @include text-property(20px, 600, 36px);
+      margin-bottom: 10px;
+    }
+  }
+
+  p {
+    @include text-property(16px, 400, 24px);
+    color: $dark-grey;
+    margin-bottom: 10px;
+
+    @media screen and (max-width: 653px) {
+      @include text-property(12px, 400, 24px);
+    }
+  }
+
+  .cityImages {
+    @include flexing(grid, space-between, center);
+    grid-template-columns: repeat(5, 1fr);
+
+    @media screen and (max-width: 797px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media screen and (max-width: 653px) {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 10px;
+    }
+
+    div {
+      @include flexing(flex, center, center);
+      flex-direction: column;
+      gap: 18px;
+
+      img {
+        @media screen and (max-width: 1070px) {
+          @include adaptive-width(153px);
+        }
+      }
+
+      h6 {
+        @include text-property(20px, 600, 28px);
+
+        @media screen and (max-width: 653px) {
+          @include text-property(15px, 600, 21px);
+        }
+      }
+    }
+  }
+}

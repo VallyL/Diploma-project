@@ -1,0 +1,155 @@
+@import "../../styles/main/functions";
+
+.mainEventsPrt2 > footer > div > p > span,
+.calendarPrt2 > span {
+  color: $dark-grey;
+}
+
+.mainEventsPrt2 > img,
+.mainEventsPrt2 {
+  @media screen and (max-width: 1160px) {
+    @include adaptive-width(242px);
+  }
+
+  @media screen and (max-width: 1060px) {
+    @include adaptive-width(212px);
+  }
+
+  @media screen and (max-width: 930px) {
+    @include adaptive-width(242px);
+  }
+
+  @media screen and (max-width: 780px) {
+    @include adaptive-width(262px);
+  }
+}
+
+.behiddenFirst,
+.behiddenLast,
+.mainEventsPrt2 > footer > div,
+.headForEvents > a {
+  @media screen and (max-width: 574px) {
+    display: none;
+  }
+}
+
+.upcoming {
+  @include adaptive-width(100%);
+  padding: 0px 15px;
+
+  .headForEvents {
+    @include flexing(flex, space-between, center);
+    margin-bottom: 20px;
+
+    h1 {
+      @include text-property(28px, 600, 36px);
+
+      @media screen and (max-width: 550px) {
+        @include text-property(20px, 600, 25px);
+      }
+    }
+
+    a {
+      @include text-property(16px, 500, 24px);
+      color: $primary-button-link-color;
+      text-decoration: none;
+    }
+  }
+
+  .secondEventList {
+    @include flexing(grid, space-between, center);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-bottom: 90px;
+
+    @media screen and (max-width: 930px) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @media screen and (max-width: 780px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media screen and (max-width: 574px) {
+      grid-template-columns: 1fr;
+      margin-bottom: 30px;
+    }
+
+    .mainEventsPrt2 {
+      @media screen and (max-width: 574px) {
+        display: flex;
+        @include adaptive-width(100%);
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      img {
+        @media screen and (max-width: 574px) {
+          @include adaptive-width(130px);
+        }
+      }
+
+      footer {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        @media screen and (max-width: 1060px) {
+          gap: 10px;
+        }
+
+        h2 {
+          @include text-property(20px, 600px, 24px);
+
+          @media screen and (max-width: 1060px) {
+            @include text-property(18px, 600, 24px);
+          }
+
+          @media screen and (max-width: 574px) {
+            @include text-property(12px, 600, 15.7px);
+          }
+        }
+
+        .greyPPrt2 {
+          @include text-property(14px, 500, 20px);
+          color: $dark-grey;
+
+          @media screen and (max-width: 574px) {
+            @include text-property(9.5px, 400, 12.3px);
+          }
+        }
+
+        .calendarPrt2 {
+          @include text-property(14px, 400, 20px);
+          @include flexing(flex, start, center);
+          gap: 5px;
+
+          @media screen and (max-width: 574px) {
+            @include text-property(9.5px, 500, 12.3px);
+          }
+        }
+
+        div {
+          @include flexing(flex, start, center);
+          gap: 20px;
+
+          p {
+            @include flexing(flex, start, center);
+            gap: 5px;
+          }
+        }
+      }
+    }
+
+    .behiddenFirst {
+      @media screen and (max-width: 930px) {
+        display: none;
+      }
+    }
+
+    .behiddenLast {
+      @media screen and (max-width: 780px) {
+        display: none;
+      }
+    }
+  }
+}

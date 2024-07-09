@@ -1,0 +1,51 @@
+@import "../../styles/main/functions";
+
+.createYourOwn {
+  @include adaptive-width(100%);
+  padding: 30px 15px;
+  color: $bottom-font-color;
+
+  .beforeHr {
+    @include flexing(flex, start, center);
+    gap: 30px;
+    height: 69px;
+
+    h2 {
+      @include text-property(16px, 600, 24px);
+    }
+
+    button {
+      @include adaptive-width(119px);
+      height: 44px;
+      border-radius: 5px;
+      color: $bottom-font-color;
+      background-color: transparent;
+      cursor: pointer;
+      border: 2px solid $bottom-font-color;
+    }
+  }
+
+  .afterHr {
+    @include flexing(flex, space-around, start);
+    margin-top: 30px;
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      li {
+        a {
+          color: $bottom-font-color;
+          text-decoration: none;
+          @include text-property(14px, 400, 20px);
+        }
+      }
+
+      .firstLink {
+        @include text-property(16px, 400, 24px);
+      }
+    }
+  }
+}

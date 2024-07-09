@@ -1,0 +1,81 @@
+@import "../../styles/main/functions";
+
+.discoverEvents {
+  @include adaptive-width(100%);
+  padding: 10px 15px;
+
+  h1 {
+    @include text-property(28px, 600, 36px);
+    margin-bottom: 20px;
+
+    @media screen and (max-width: 500px) {
+      @include text-property(20px, 600, 36px);
+      margin-bottom: 10px;
+    }
+  }
+
+  .discoverContainer {
+    @include adaptive-width(100%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+
+    @media screen and (max-width: 500px) {
+      grid-template-columns: 1fr;
+      row-gap: 15px;
+    }
+
+    div {
+      @include flexing(flex, start, start);
+      gap: 20px;
+      border-radius: 15px;
+      padding: 20px 15px;
+      background-color: $background-light-blue;
+
+      img {
+        @include adaptive-width(41px);
+        @media screen and (max-width: 706px) {
+          @include adaptive-width(25.5px);
+        }
+      }
+
+      .green {
+        @include flexing(flex, start, start);
+        flex-direction: column;
+        gap: 15px;
+        background-color: transparent;
+        padding: 0px;
+
+        @media screen and (max-width: 706px) {
+          gap: 8px;
+        }
+
+        h2 {
+          @include text-property(20px, 600, 24px);
+
+          @media screen and (max-width: 706px) {
+            @include text-property(12px, 600, 15px);
+          }
+        }
+
+        p {
+          @include text-property(16px, 400, 24px);
+
+          @media screen and (max-width: 706px) {
+            @include text-property(10px, 400, 15px);
+          }
+        }
+
+        a {
+          @include text-property(16px, 500, 24px);
+          text-decoration: none;
+          color: $primary-button-link-color;
+
+          @media screen and (max-width: 706px) {
+            @include text-property(10px, 500, 15px);
+          }
+        }
+      }
+    }
+  }
+}

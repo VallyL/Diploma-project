@@ -1,0 +1,67 @@
+@import "../../styles/main/functions";
+
+.topCategories {
+  @include adaptive-width(100%);
+  padding: 40px 15px;
+
+  h1 {
+    @include text-property(28px, 600, 30px);
+    margin-bottom: 30px;
+
+    @media screen and (max-width: 578px) {
+      @include text-property(20px, 600, 30px);
+      margin-bottom: 20px;
+    }
+  }
+
+  .categoriesContainer {
+    @include flexing(grid, space-between, center);
+    grid-template-columns: repeat(8, 1fr);
+    @include adaptive-width(100%);
+
+    @media screen and (max-width: 1120px) {
+      grid-template-columns: repeat(7, 1fr);
+      row-gap: 10px;
+    }
+
+    @media screen and (max-width: 988px) {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    @media screen and (max-width: 852px) {
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    @media screen and (max-width: 715px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media screen and (max-width: 578px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media screen and (max-width: 443px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    div {
+      @include adaptive-width(135px);
+      height: 112px;
+      @include flexing(flex, center, center);
+      background-color: $background-light-blue;
+      border-radius: 10px;
+      flex-direction: column;
+      gap: 10px;
+      padding: 0px 27px;
+      text-align: center;
+
+      img {
+        @include adaptive-width(20px);
+      }
+
+      h3 {
+        @include text-property(16px, 500, 24px);
+      }
+    }
+  }
+}

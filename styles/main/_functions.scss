@@ -1,0 +1,29 @@
+$primary-grey-color: #d9d9d9;
+$primary-button-link-color: #00798a;
+$background-light-blue: #97cad15b;
+$dark-grey: #707070;
+$bottom-font-color: #f6f7f8;
+
+@mixin adaptive-width($width) {
+  width: $width;
+}
+
+@mixin text-property($size, $weight, $height) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+}
+
+@mixin flexing($display, $justify, $align) {
+  display: $display;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin button-styles($color, $backgroundcolor) {
+  color: $color;
+  background-color: $backgroundcolor;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}

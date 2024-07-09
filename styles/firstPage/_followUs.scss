@@ -1,0 +1,73 @@
+@import "../../styles/main/functions";
+
+.followUsOnWebs > div > img,
+.followButtons > button {
+  cursor: pointer;
+}
+
+.followUsOnWebs,
+.followUsOnWebs > div,
+.followButtons {
+  display: flex;
+}
+
+.followUs {
+  @include flexing(flex, space-between, center);
+  @include adaptive-width(100%);
+  padding: 30px 15px;
+  color: $bottom-font-color;
+
+  .followUsOnWebs {
+    flex-direction: column;
+    gap: 15px;
+    color: $bottom-font-color;
+
+    p {
+      @include text-property(16px, 400, 24px);
+      color: $bottom-font-color;
+    }
+
+    div {
+      gap: 30px;
+
+      img {
+        @include adaptive-width(30px);
+        height: 30px;
+      }
+    }
+  }
+
+  .followButtons {
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+
+    button {
+      @include adaptive-width(140px);
+      @include flexing(flex, center, center);
+      height: 40px;
+      background-color: black;
+      border: 1px solid white;
+      border-radius: 5px;
+      color: #f6f7f8;
+      gap: 8px;
+
+      @media screen and (max-width: 600px) {
+        display: none;
+      }
+
+      div {
+        @include flexing(flex, center, start);
+        flex-direction: column;
+
+        p {
+          font-size: 12px;
+        }
+
+        h2 {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@import "../../styles/main/functions";
+
+.headingPicture,
+.headingPicture > img {
+  @media screen and (max-width: 765px) {
+    width: 238px;
+  }
+}
+
+.secondHeading {
+  @include adaptive-width(100%);
+  padding: 15px 30px;
+  @include flexing(flex, space-between, center);
+  gap: 90px;
+  background-color: $background-light-blue;
+  border-radius: 10px;
+
+  @media screen and (max-width: 525px) {
+    flex-direction: column-reverse;
+    padding: 15px 15px;
+  }
+
+  @media screen and (max-width: 900px) {
+    gap: 10px;
+  }
+
+  .joinUs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media screen and (max-width: 900px) {
+      gap: 10px;
+    }
+
+    h1 {
+      @include text-property(28px, 600, 36px);
+
+      @media screen and (max-width: 570px) {
+        @include text-property(20px, 600, 36px);
+      }
+    }
+
+    p {
+      @include text-property(16px, 400, 24px);
+
+      @media screen and (max-width: 570px) {
+        @include text-property(12px, 400, 24px);
+      }
+    }
+
+    button {
+      @include adaptive-width(192px);
+      height: 40px;
+      @include button-styles(white, #e32359);
+
+      @media screen and (max-width: 525px) {
+        align-self: center;
+      }
+    }
+  }
+}

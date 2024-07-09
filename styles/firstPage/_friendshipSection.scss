@@ -1,0 +1,114 @@
+@import "../../styles/main/functions";
+
+.friendshipSection > p,
+.friendship > div > p,
+.friendship > div > a {
+  @include text-property(16px, 400, 24px);
+}
+
+.friendship > div,
+.friendship > div > img {
+  @include adaptive-width(376px);
+
+  @media screen and (max-width: 1170px) {
+    @include adaptive-width(360px);
+  }
+
+  @media screen and (max-width: 1120px) {
+    @include adaptive-width(320px);
+  }
+
+  @media screen and (max-width: 1000px) {
+    @include adaptive-width(300px);
+  }
+
+  @media screen and (max-width: 945px) {
+    @include adaptive-width(360px);
+  }
+
+  @media screen and (max-width: 760px) {
+    @include adaptive-width(320px);
+  }
+
+  @media screen and (max-width: 682px) {
+    @include adaptive-width(300px);
+  }
+
+  @media screen and (max-width: 640px) {
+    @include adaptive-width(100%);
+  }
+}
+
+.friendshipSection > p,
+.friendship > div > p {
+  color: $dark-grey;
+}
+
+.friendshipSection > h1,
+.friendshipSection > p {
+  margin-bottom: 15px;
+}
+
+.friendship > div > p,
+.friendship > div > a {
+  @media screen and (max-width: 760px) {
+    @include text-property(12px, 400, 23px);
+  }
+}
+
+.friendshipSection {
+  @include adaptive-width(100%);
+  padding: 30px 15px;
+
+  h1 {
+    @include text-property(28px, 600, 36px);
+
+    @media screen and (max-width: 640px) {
+      @include text-property(20px, 600, 36px);
+    }
+  }
+
+  .black {
+    @media screen and (max-width: 760px) {
+      display: none;
+    }
+  }
+
+  .friendship {
+    @include adaptive-width(100%);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    @media screen and (max-width: 945px) {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 10px;
+    }
+
+    @media screen and (max-width: 640px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      @media screen and (max-width: 760px) {
+        gap: 10px;
+      }
+
+      h2 {
+        @include text-property(18px, 600, 28px);
+
+        @media screen and (max-width: 760px) {
+          @include text-property(16px, 600, 27px);
+        }
+      }
+
+      a {
+        color: $primary-button-link-color;
+        text-decoration: none;
+      }
+    }
+  }
+}

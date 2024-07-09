@@ -1,0 +1,39 @@
+@import "../../styles/main/functions";
+
+.noFour,
+.noFive {
+  @media screen and (max-width: 430px) {
+    display: none;
+  }
+}
+
+.termsOfService {
+  @include adaptive-width(100%);
+  padding: 30px 15px;
+  display: flex;
+  gap: 20px;
+
+  a {
+    text-decoration: none;
+    color: $bottom-font-color;
+    @include text-property(14px, 400, 20px);
+  }
+
+  .noOne {
+    @media screen and (max-width: 730px) {
+      display: none;
+    }
+  }
+
+  .noTwo {
+    @media screen and (max-width: 680px) {
+      display: none;
+    }
+  }
+
+  .noThree {
+    @media screen and (max-width: 580px) {
+      display: none;
+    }
+  }
+}
