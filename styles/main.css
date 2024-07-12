@@ -46,6 +46,7 @@
 
 .firstChild img {
   margin-right: 30px;
+  cursor: pointer;
 }
 .firstChild .serch {
   border: 1px solid #d9d9d9;
@@ -1341,6 +1342,7 @@
   display: flex;
   justify-content: space-between;
   align-items: start;
+  width: 100%;
 }
 .activeEvents .filteredEvents h1 {
   font-size: 28px;
@@ -1376,6 +1378,7 @@
 }
 .activeEvents .filteredEvents .filterContainer .pag {
   left: 405px;
+  transition: none;
 }
 @media screen and (max-width: 458px) {
   .activeEvents .filteredEvents .filterContainer .pag {
@@ -1452,7 +1455,7 @@
   gap: 10px;
   margin-left: 15px;
 }
-@media screen and (max-width: 838px) {
+@media screen and (max-width: 890px) {
   .activeEvents .map {
     display: none;
   }

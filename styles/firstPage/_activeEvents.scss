@@ -31,6 +31,7 @@
 .activeEvents {
   padding: 30px 15px;
   @include flexing(flex, space-between, start);
+  width: 100%;
 
   .filteredEvents {
     h1 {
@@ -67,6 +68,7 @@
 
       .pag {
         left: 405px;
+        transition: none;
 
         @media screen and (max-width: 458px) {
           left: 105px;
@@ -142,7 +144,7 @@
     gap: 10px;
     margin-left: 15px;
 
-    @media screen and (max-width: 838px) {
+    @media screen and (max-width: 890px) {
       display: none;
     }
 
