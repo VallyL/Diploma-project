@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MeetUp</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <section class="header">
+        <div class="firstChild">
+          <img src="images/SVG.svg" />
+          <div class="serch">
+            <form class="hidden">
+              <button type="submit" class="searchBtn">
+                <span class="material-symbols-outlined whiteOne"> search </span>
+              </button>
+              <input
+                type="text"
+                placeholder="Search events"
+                name="searchEvent"
+                class="search-events-input"
+              />
+            </form>
+            <form>
+              <input
+                type="text"
+                placeholder="Search city"
+                name="searchCity"
+                class="search-city-input"
+              />
+              <button type="submit" class="searchBtnTwo">
+                <span class="material-symbols-outlined whiteTwo"> search </span>
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="btnEnd">
+          <button class="english">
+            <span class="material-symbols-outlined"> globe </span>
+            English
+          </button>
+          <button class="login">Log in</button>
+          <button class="signup">Sign up</button>
+        </div>
+      </section>
+      <nav class="activeEvents">
+        <section class="filteredEvents">
+          <h1>Events near New York, NY</h1>
+          <a href="">Events</a>
+
+          <div class="filterContainer">
+            <span class="material-symbols-outlined pig">
+              keyboard_arrow_down
+            </span>
+            <span class="material-symbols-outlined pog">
+              keyboard_arrow_down
+            </span>
+            <span class="material-symbols-outlined pag">
+              keyboard_arrow_down
+            </span>
+            <div class="filterByType">
+              <select class="type-filter">
+                <option value="">Any type</option>
+                <option value="online">Online</option>
+                <option value="offline">Offline</option>
+              </select>
+            </div>
+
+            <div class="filterByDistance">
+              <select class="distance-filter">
+                <option value="">Any distance</option>
+                <option value="5">5km</option>
+                <option value="10">10km</option>
+                <option value="15">15km</option>
+                <option value="25">25km</option>
+                <option value="50">50km</option>
+                <option value="75">75km</option>
+                <option value="100">100km</option>
+              </select>
+            </div>
+
+            <div class="filterByCategory">
+              <select class="category-filter">
+                <option value="">Any category</option>
+                <option value="Social Activities">Social Activities</option>
+                <option value="Hobbies and Passions">
+                  Hobbies and Passions
+                </option>
+                <option value="Health and Wellbeing">
+                  Health and Wellbeing
+                </option>
+                <option value="Business">Business</option>
+                <option value="Technology">Technology</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="event-list"></div>
+        </section>
+        <section class="map">
+          <p>Find events near</p>
+          <h1>New York, NY</h1>
+          <img class="mapImage" src="images/map-thumbnail.png.svg" />
+          <a class="browseInMap" href=""
+            >Browse in map
+            <span class="material-symbols-outlined"> open_in_full </span></a
+          >
+        </section>
+      </nav>
+      <nav class="lastPagePart">
+        <section class="createYourOwn">
+          <div class="beforeHr">
+            <h2>Create your own Meetup group.</h2>
+            <button>Get Started</button>
+          </div>
+          <hr />
+          <div class="afterHr">
+            <ul>
+              <li><a href="" class="firstLink">Your Account</a></li>
+              <li><a href="">Sign up</a></li>
+              <li><a href="">Log in</a></li>
+              <li><a href="">Help</a></li>
+              <li><a href="">Become an Affiliate</a></li>
+            </ul>
+            <ul>
+              <li><a href="" class="firstLink">Discover</a></li>
+              <li><a href="">Groups</a></li>
+              <li><a href="">Calendar</a></li>
+              <li><a href="">Topics</a></li>
+              <li><a href="">Cities</a></li>
+              <li><a href="">Online Events</a></li>
+              <li><a href="">Local Guides</a></li>
+              <li><a href="">Make Friends</a></li>
+            </ul>
+            <ul>
+              <li><a href="" class="firstLink">Meetup</a></li>
+              <li><a href="">About</a></li>
+              <li><a href="">Blog</a></li>
+              <li><a href="">Meetup Pro</a></li>
+              <li><a href="">Careers</a></li>
+              <li><a href="">Apps</a></li>
+              <li><a href="">Podcast</a></li>
+            </ul>
+          </div>
+        </section>
+        <section class="followUs">
+          <div class="followUsOnWebs">
+            <p>Follow us</p>
+            <div>
+              <img src="images/Link - Meetup on Facebook → SVG.svg" />
+              <img src="images/Link - Meetup on Twitter → SVG.svg" />
+              <img src="images/Link - Meetup on YouTube → SVG.svg" />
+              <img src="images/Link - Instagram → SVG.svg" />
+              <img src="images/Link - TikTok → SVG.svg" />
+            </div>
+          </div>
+          <div class="followButtons">
+            <button>
+              <i
+                class="fa-brands fa-google-play fa-2xl"
+                style="color: #ebebeb"
+              ></i>
+              <div>
+                <p>GET IT ON</p>
+                <h2>Google Play</h2>
+              </div>
+            </button>
+            <button>
+              <i class="fa-brands fa-apple fa-2xl" style="color: #ebebeb"></i>
+              <div>
+                <p>Download on the</p>
+                <h2>App Store</h2>
+              </div>
+            </button>
+          </div>
+        </section>
+        <section class="termsOfService">
+          <a href="">© 2024 Meetup</a>
+          <a href="" class="noFive">Terms of Service</a>
+          <a href="" class="noFour">Privacy Policy</a>
+          <a href="" class="noThree">Do Not Sell or Share My Personal Data</a>
+          <a href="" class="noTwo">Cookie Policy</a>
+          <a href="" class="noOne">Help</a>
+        </section>
+      </nav>
+    </main>
+    <script
+      src="https://kit.fontawesome.com/2acba051fb.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="scripts/secondPage.js"></script>
+  </body>
+</html>
