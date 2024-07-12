@@ -1308,6 +1308,181 @@
   }
 }
 
+.filterContainer,
+.map {
+  position: relative;
+}
+
+.filterContainer > span,
+.browseInMap {
+  position: absolute;
+}
+
+.pig,
+.pog,
+.pag {
+  top: 13px;
+}
+
+.filterContainer > div > select,
+.filterContainer > span,
+.event-list > div > div > h3 {
+  cursor: pointer;
+}
+
+.event-list,
+.map {
+  display: flex;
+  flex-direction: column;
+}
+
+.activeEvents {
+  padding: 30px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+.activeEvents .filteredEvents h1 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 36px;
+}
+.activeEvents .filteredEvents a {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  color: #00798a;
+}
+.activeEvents .filteredEvents .filterContainer {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 458px) {
+  .activeEvents .filteredEvents .filterContainer {
+    flex-wrap: wrap;
+    position: relative;
+  }
+}
+.activeEvents .filteredEvents .filterContainer span {
+  pointer-events: none;
+}
+.activeEvents .filteredEvents .filterContainer .pig {
+  left: 105px;
+}
+.activeEvents .filteredEvents .filterContainer .pog {
+  left: 255px;
+}
+.activeEvents .filteredEvents .filterContainer .pag {
+  left: 405px;
+}
+@media screen and (max-width: 458px) {
+  .activeEvents .filteredEvents .filterContainer .pag {
+    left: 105px;
+    top: 75px;
+  }
+}
+.activeEvents .filteredEvents .filterContainer div select {
+  width: 135px;
+  height: 46px;
+  border: none;
+  border-radius: 25px;
+  background-color: rgba(151, 202, 209, 0.3568627451);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-left: 20px;
+}
+.activeEvents .filteredEvents .filterContainer div select:focus {
+  outline: none;
+}
+.activeEvents .filteredEvents .event-list {
+  gap: 40px;
+}
+.activeEvents .filteredEvents .event-list div {
+  display: flex;
+  gap: 10px;
+}
+.activeEvents .filteredEvents .event-list div img {
+  width: 159px;
+  height: 89.9px;
+  border-radius: 10px;
+}
+@media screen and (max-width: 464px) {
+  .activeEvents .filteredEvents .event-list div img {
+    width: 98px;
+    height: 64px;
+  }
+}
+.activeEvents .filteredEvents .event-list div div {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+.activeEvents .filteredEvents .event-list div div h3 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+@media screen and (max-width: 464px) {
+  .activeEvents .filteredEvents .event-list div div h3 {
+    font-size: 9.8px;
+    font-weight: 500;
+    line-height: 14px;
+  }
+}
+.activeEvents .filteredEvents .event-list div div p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #707070;
+}
+@media screen and (max-width: 464px) {
+  .activeEvents .filteredEvents .event-list div div p {
+    font-size: 8.5px;
+    font-weight: 400;
+    line-height: 12px;
+  }
+}
+.activeEvents .map {
+  gap: 10px;
+  margin-left: 15px;
+}
+@media screen and (max-width: 838px) {
+  .activeEvents .map {
+    display: none;
+  }
+}
+.activeEvents .map p {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+}
+.activeEvents .map h1 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+}
+.activeEvents .map .browseInMap {
+  top: 170px;
+  left: 90px;
+  color: #00798a;
+  width: 172px;
+  height: 40px;
+  background-color: white;
+  border-radius: 10px;
+  border: 2px solid #00798a;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -1325,7 +1500,20 @@ main {
   flex-direction: column;
 }
 
+#secondPageMain {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .smallerBody {
+  max-width: 1226px;
+}
+
+.activeEvents {
   max-width: 1226px;
 }
 

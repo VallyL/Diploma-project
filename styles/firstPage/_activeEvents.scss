@@ -1,0 +1,171 @@
+@import "../../styles/main/functions";
+
+.filterContainer,
+.map {
+  position: relative;
+}
+
+.filterContainer > span,
+.browseInMap {
+  position: absolute;
+}
+
+.pig,
+.pog,
+.pag {
+  top: 13px;
+}
+
+.filterContainer > div > select,
+.filterContainer > span,
+.event-list > div > div > h3 {
+  cursor: pointer;
+}
+
+.event-list,
+.map {
+  display: flex;
+  flex-direction: column;
+}
+
+.activeEvents {
+  padding: 30px 15px;
+  @include flexing(flex, space-between, start);
+
+  .filteredEvents {
+    h1 {
+      @include text-property(28px, 600, 36px);
+    }
+
+    a {
+      @include text-property(20px, 500, 28px);
+      color: $primary-button-link-color;
+    }
+
+    .filterContainer {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+      margin-bottom: 50px;
+
+      @media screen and (max-width: 458px) {
+        flex-wrap: wrap;
+        position: relative;
+      }
+
+      span {
+        pointer-events: none;
+      }
+
+      .pig {
+        left: 105px;
+      }
+
+      .pog {
+        left: 255px;
+      }
+
+      .pag {
+        left: 405px;
+
+        @media screen and (max-width: 458px) {
+          left: 105px;
+          top: 75px;
+        }
+      }
+
+      div {
+        select {
+          @include adaptive-width(135px);
+          height: 46px;
+          border: none;
+          border-radius: 25px;
+          background-color: $background-light-blue;
+          @include text-property(14px, 500, 20px);
+          appearance: none;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          padding-left: 20px;
+        }
+
+        select:focus {
+          outline: none;
+        }
+      }
+    }
+
+    .event-list {
+      gap: 40px;
+
+      div {
+        display: flex;
+        gap: 10px;
+
+        img {
+          @include adaptive-width(159px);
+          height: 89.9px;
+          border-radius: 10px;
+
+          @media screen and (max-width: 464px) {
+            @include adaptive-width(98px);
+            height: 64px;
+          }
+        }
+
+        div {
+          display: flex;
+          flex-direction: column;
+          gap: 0px;
+
+          h3 {
+            @include text-property(16px, 500, 24px);
+
+            @media screen and (max-width: 464px) {
+              @include text-property(9.8px, 500, 14px);
+            }
+          }
+
+          p {
+            @include text-property(14px, 500, 20px);
+            color: $dark-grey;
+
+            @media screen and (max-width: 464px) {
+              @include text-property(8.5px, 400, 12px);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .map {
+    gap: 10px;
+    margin-left: 15px;
+
+    @media screen and (max-width: 838px) {
+      display: none;
+    }
+
+    p {
+      @include text-property(12px, 500, 16px);
+    }
+
+    h1 {
+      @include text-property(20px, 700, 28px);
+    }
+
+    .browseInMap {
+      top: 170px;
+      left: 90px;
+      color: $primary-button-link-color;
+      @include adaptive-width(172px);
+      height: 40px;
+      background-color: white;
+      border-radius: 10px;
+      border: 2px solid $primary-button-link-color;
+      text-decoration: none;
+      @include flexing(flex, center, center);
+      gap: 10px;
+    }
+  }
+}
