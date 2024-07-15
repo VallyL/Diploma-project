@@ -44,13 +44,12 @@ main {
 }
 
 .lastPagePart {
-  max-width: 1226px;
+  max-width: 1920px;
   background-color: #212121;
   padding: 0px 15px;
 }
 
 .backgroungForLastPrt {
-  background-color: #212121;
   @include adaptive-width(100%);
   @include flexing(flex, center, center);
 }
