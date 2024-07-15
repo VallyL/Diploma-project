@@ -54,3 +54,7 @@ main {
   @include adaptive-width(100%);
   @include flexing(flex, center, center);
 }
+
+.header {
+  max-width: 1920px;
+}
