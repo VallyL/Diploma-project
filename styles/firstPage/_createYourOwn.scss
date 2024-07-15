@@ -1,5 +1,9 @@
 @import "../../styles/main/functions";
 
+.lastPagePart {
+  @include adaptive-width(100%);
+}
+
 .createYourOwn {
   @include adaptive-width(100%);
   padding: 30px 15px;
